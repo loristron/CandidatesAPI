@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+	<div class="col-lg-8 mx-auto">
+		{% if messages %}
+			{% for message in messages %}
+	   			<div class="alert alert-danger" role="alert">
+ 					{{message}}
+				</div>	   			 	
+			{% endfor %}
+
+		{% endif %}
+		<h1 style="text-align: center;">Pesquisar Candidaturas</h1>
+		<br>
+		<ul>
+			<li> Pesquisar pelo numero identificador do candidato: </li>
+		</ul>
+			<form action=""> 
+          		<div class="input-group mb-3">
+ 				 <input type="number" min='1' class="form-control" placeholder="Número Identificador do Candidato" name="num-candidato">
+ 			 	<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
+ 				</div>
+ 			</form>
+ 		<br>
+ 		<ul>
+ 			<li> Pesquisar candidatos eleitos por Município: </li>
+ 		</ul>
+ 		<form action=""> 
+          	<div class="input-group mb-3">
+ 				 <input type="number" class="form-control" placeholder="Código do Município" name='municipio'>
+ 			 	<button class="btn btn-outline-dark" type="submit" id="button-addon2">Pesquisar</button>
+ 			</div>
+ 			
+ 		</form>
+	</div>      
+</div>
+
+
+  
+
+
+{% endblock content %}

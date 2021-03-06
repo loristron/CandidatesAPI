@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+	<center>
+		<div class="col" style="padding-top: 4%;">
+			<h1>Candidados eleitos em {{nm_ue|title}}</h1>
+		</div>
+	</center>
+</div>
+<div class="row" style="padding: 3%;">
+  <div class="col-12 ">
+    <div class="card">
+      <div class="card-body">
+	     <table class="table">
+	   	   <thead class="thead-dark">
+   			  <tr>
+      			<th scope="col">Nome do Candidato</th>
+      			<th scope="col">Nº Votos</th>
+      			<th scope="col">Município</th>
+      			<th scope="col">Partido</th>
+      			<th scope="col">Sigla</th>
+      			<th scope="col">Cargo</th>
+      			<th scope="col">Status</th>
+    		  </tr>
+    	   </thead>
+    	   <tbody>
+    	   	{% for candidato in queryset %}
+    		  <tr>
+    			 <td>{{candidato.nm_candidato|title}}</td>
+    			 <td>{{candidato.sg_ue}}</td>
+    			 <td>{{candidato.nm_ue|title}}</td>
+    			 <td>{{candidato.nm_partido|title}}</td>
+    			 <td>{{candidato.sg_partido}}</td>
+    			 <td>{{candidato.ds_cargo|title}}</td>
+    			 <td>{{candidato.ds_sit_tot_turno|title}}</td>
+    		  </tr>
+    		 {% endfor %}
+  		  </tbody>
+  	   </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}
