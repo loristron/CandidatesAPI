@@ -17,7 +17,7 @@
 	   	   <thead class="thead-dark">
    			  <tr>
       			<th scope="col">Nome do Candidato</th>
-      			<th scope="col">Nº Votos</th>
+      			<th scope="col">Cd. Municipio</th>
       			<th scope="col">Município</th>
       			<th scope="col">Partido</th>
       			<th scope="col">Sigla</th>
@@ -28,7 +28,7 @@
     	   <tbody>
     	   	{% for candidato in queryset %}
     		  <tr>
-    			 <td>{{candidato.nm_candidato|title}}</td>
+    			 <td><a href="{% url 'core:detail-candidato' num=candidato.sq_candidato %}">{{candidato.nm_candidato|title}}</td>
     			 <td>{{candidato.sg_ue}}</td>
     			 <td>{{candidato.nm_ue|title}}</td>
     			 <td>{{candidato.nm_partido|title}}</td>

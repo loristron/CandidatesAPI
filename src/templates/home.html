@@ -11,29 +11,40 @@
 			{% endfor %}
 
 		{% endif %}
+		<br>
 		<h1 style="text-align: center;">Pesquisar Candidaturas</h1>
 		<br>
-		<ul>
-			<li> Pesquisar pelo numero identificador do candidato: </li>
-		</ul>
-			<form action=""> 
-          		<div class="input-group mb-3">
- 				 <input type="number" min='1' class="form-control" placeholder="Número Identificador do Candidato" name="num-candidato">
- 			 	<button class="btn btn-outline-secondary" type="submit" id="button-addon2">Pesquisar</button>
- 				</div>
- 			</form>
+		<br>
+		<div class="card">
+			<div class="header">
+				<h5 class="card card-header"> Pesquisar pelo Nº. Identificador </h5> 
+			</div>
+			<div class="card card-body">		
+				<form action=""> 
+	          		<div class="input-group mb-3">
+	 				 <input type="number" min='1' class="form-control" placeholder="Número Identificador do Candidato" name="num-candidato">
+	 			 	<button class="btn btn-outline-dark" type="submit" id="button-addon2">Pesquisar</button>
+	 				</div>
+	 			</form>
+	 		</div>
+	 	</div>
  		<br>
- 		<ul>
- 			<li> Pesquisar candidatos eleitos por Município: </li>
- 		</ul>
- 		<form action=""> 
-          	<div class="input-group mb-3">
- 				 <input type="number" class="form-control" placeholder="Código do Município" name='municipio'>
- 			 	<button class="btn btn-outline-dark" type="submit" id="button-addon2">Pesquisar</button>
+ 		<br>
+ 		<div class="card">
+ 			<div class="header">
+ 				<h5 class="card card-header"> Pesquisar pelo Município: </h5> 
  			</div>
- 			
- 		</form>
-	</div>      
+ 			<div class="card card-body">
+		 		<form action=""> 
+		          	<div class="input-group mb-3">
+		 				 <input type="number" class="form-control" placeholder="Código do Município" name='municipio'>
+		 			 	<button class="btn btn-outline-dark" type="submit" id="button-addon2">Pesquisar</button>
+		 			</div>
+		 			
+		 		</form>
+			</div>      
+		</div>
+	</div>
 </div>
 
 

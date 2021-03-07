@@ -29,7 +29,7 @@
     		  <tr>
     			 <td>{{candidato.sq_candidato}}</td>
     			 <td>{{candidato.sg_ue}}</td>
-    			 <td>{{candidato.nm_ue|title}}</td>
+    			 <td><a href="{% url 'core:candidatos-eleitos' num=candidato.sg_ue %}">{{candidato.nm_ue|title}}</td></a>
     			 <td>{{candidato.nm_partido|title}}</td>
     			 <td>{{candidato.sg_partido}}</td>
     			 <td>{{candidato.ds_cargo|title}}</td>
